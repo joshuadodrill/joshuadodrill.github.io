@@ -1,3 +1,8 @@
+# General Settings
+theme               : jekyll-theme-minimal
+title               : Joshua Dodrill's Homepage
+description         : Placeholder
+
 # Where things are
 source              : .
 destination         : ./_site
