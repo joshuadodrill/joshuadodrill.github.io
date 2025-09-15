@@ -1,7 +1,8 @@
 :root {
-    --text-color: black;
-    --link-color: rgb(74, 74, 255);
-    --background-color: rgba(204, 204, 204, 0.815);
+    --text-color: #2f3547;
+    --link-color: #B3978E;
+    --background-color: #f5f4ef;
+    --skills-background-color: #A5B5D5;
 }
 
 * {
@@ -133,11 +134,13 @@ nav .right a span {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    background-color: var(--skills-background-color);
 
     width: 200px;
     padding: 10px 20px;
     margin: 10px;
-    border: 1px, solid, rgb(34, 34, 34);
+    border: 1px, solid, var(--text-color);
+    border-radius: 5px;
 }
 
 .section-2 .cells .cell img {
@@ -149,6 +152,76 @@ nav .right a span {
 
 .section-2 .cells .cell span {
     font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Section 3 */
+.section-3 {
+    padding: 0px 50px;
+    margin-bottom: 100px;
+}
+
+.section-3 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-3 .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.section-3 .cells .btn1 {
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+    background-image: url(images/Headshot.webp);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+
+.section-3 .cells .btn1 span{
+    background-color: var(--skills-background-color);
+
+}
+
+.section-3 .cells .btn2 {
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+    background-image: url(images/Headshot.webp);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+
+.section-3 .cells .btn2 span{
+    background-color: var(--skills-background-color);
+
+}
+
+.section-3 .cells .btn3 {
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+    background-image: url(images/Headshot.webp);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+
+.section-3 .cells .btn3 span{
+    background-color: var(--skills-background-color);
+
 }
 
 @media (max-width: 850) {
