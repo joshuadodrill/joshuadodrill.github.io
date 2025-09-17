@@ -3,6 +3,8 @@
     --link-color: #B3978E;
     --background-color: #f5f4ef;
     --skills-background-color: #A5B5D5;
+    --projects-background-color: #f1f0f0;
+    --projects-background-outline: #cccbca;
 }
 
 * {
@@ -18,6 +20,8 @@ html {
 body {
     font-family: 'Merriweather', sans-serif;
     background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 a {
@@ -173,35 +177,62 @@ nav .right a span {
     gap: 30px;
 }
 
-.section-3 .cells .btn1 {
-    width: 200px;
-    height: 200px;
-    background-size: 100% 100%;
-    background-image: url(images/Headshot.webp);
+.section-3 .cells .button {
+    width: 250px;
+    height: 250px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 5px;
-    border: 2px solid var(--link-color);
+    align-items: center;
+    background-color: var(--projects-background-color);
+    /* justify-content: flex-end; */
+    border-radius: 10%;
+    border: 1px solid var(--projects-background-outline);
+    margin-bottom: 30px;
 }
 
-.section-3 .cells .btn1 span{
-    background-color: var(--skills-background-color);
+.section-3 .cells .button h3 {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 18px;
+}
+
+.section-3 .cells .button span{
+    font-size: 16px;
+    font-family: 'Merriweather', sans-serif;
+    background-color: var(--projects-background-color);
 
 }
 
-.section-3 .cells .btn2 {
+.section-3 .cells .button .container { 
     width: 200px;
-    height: 200px;
-    background-size: 100% 100%;
-    background-image: url(images/Headshot.webp);
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /* object-fit: cover; */
+}
+
+.section-3 .cells .button .container img {
+    justify-content: center;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    /* margin-top: 30px;
+    margin-bottom: 10px;
+    width:200px;
+    height: 200px; */
+    border-radius: 10%;
+}
+
+/* .section-3 .cells .btn2 {
+    width: 250px;
+    height: 300px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 5px;
-    border: 2px solid var(--link-color);
+    background-color: var(--projects-background-color);
+    border-radius: 10%;
+    border: 1px solid var(--projects-background-outline);
+    margin-bottom: 20px;
 }
 
 .section-3 .cells .btn2 span{
@@ -210,21 +241,86 @@ nav .right a span {
 }
 
 .section-3 .cells .btn3 {
-    width: 200px;
-    height: 200px;
-    background-size: 100% 100%;
-    background-image: url(images/Headshot.webp);
+    width: 250px;
+    height: 300px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 5px;
-    border: 2px solid var(--link-color);
+    background-color: var(--projects-background-color);
+    border-radius: 10%;
+    border: 1px solid var(--projects-background-outline);
+    margin-bottom: 20px;
 }
 
 .section-3 .cells .btn3 span{
     background-color: var(--skills-background-color);
 
+} */
+
+.section-3 .cells .button:hover {
+    filter: brightness(0.9);
+}
+
+/* .section-3 .cells .btn2:hover {
+    filter: brightness(0.9);
+}
+
+.section-3 .cells .btn3:hover {
+    filter: brightness(0.9);
+} */
+
+/* Section-4: Contact */
+.section-4 {
+    padding: 0px 50px;
+    margin-bottom: 100px;
+}
+
+.section-4 h2 {
+    font-size: 35px;
+}
+
+.section-4 h3 {
+    margin-top: 20px;
+}
+
+.section-4 .group {
+    display: flex;
+    gap: 50px;
+}
+
+.section-4 .group .text {
+    margin-top: 20px;
+    flex: 3;
+}
+
+.section-4 .group form {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.section-4 .group form input,
+.section-4 .group form textarea {
+    font-family: 'Merriweather', sans-serif;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    padding:10px;
+    margin-bottom: 15px;
+    outline:none;
+    resize:none;
+}
+
+.section-4 .group form button {
+    font-size: 16px;
+    font-family: 'Merriweather', sans-serif;
+    height: 50px;
+    cursor:pointer;
+    border-radius: 5px;
+    background-color: var(--link-color);
+}
+
+.section-4 .group form button:hover {
+    filter: brightness(0.9);
 }
 
 @media (max-width: 850) {
@@ -242,6 +338,11 @@ nav .right a span {
 
     .section-1 .headshot img {
         width: 250px;
+    }
+
+    /* Section-4 */
+    .section-4 .group {
+        flex-direction: column;
     }
 }
 
@@ -281,5 +382,19 @@ nav .right a span {
 
     .section-2 .cells .cell span {
         font-size: 16px;
+    }
+
+    /* Section-3 */
+    .section-3 {
+        padding: 0px 20px;
+    }
+
+    .section-3 .text {
+        font-size: 16px;
+    }
+
+    /* Section-4 */
+    .section-4 {
+        padding: 0px 20px;
     }
 }

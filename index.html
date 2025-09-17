@@ -144,20 +144,61 @@
         <h2>My Projects</h2>
 
         <div class="cells">
-          <button type="info1" class="btn1">
-            <span>Motorcycle Restoration</span>
+          <button type="info1" class="button">
+            <div class="container">
+              <img src="images/CBR600F3.webp" alt="Motorcycle" />
+            </div>
+            <h3>Motorcycle Restoration</h3>
+            <span>Coming Soon</span>
           </button>
-          <button type="info2" class="btn2">
-            <span>Button 2</span>
+          <button type="info2" class="button">
+            <div class="container">
+              <img src="images/website-icon.webp" alt="Portfolio Website" />
+            </div>
+            <h3>Portfolio Website</h3>
+            <span>Ongoing</span>
           </button>
-          <button type="info3" class="btn3">
-            <span>Button 3</span>
+          <button type="info3" class="button">
+            <div class="container">
+              <img src="images/robot-arm.webp" alt="6DOF Robot" />
+            </div>
+            <h3>6-DOF Robot Arm</h3>
+            <span>Coming Soon</span>
           </button>
         </div>
       </section>
 
       <!-- Section 4: Contact -->
-      <section id="contact" class="section-4"></section>
+      <section id="contact" class="section-4">
+        <h2>Contact Me</h2>
+        <h3>I'd like to hear from you!</h3>
+        <div class="group">
+          <div class="text">
+            <span></span>
+
+            If you have any inquiries or would like to say hi, please use the
+            contact form!
+          </div>
+
+          <form
+            action="https://formspree.io/f/myzdavje"
+            method="POST"
+            type="text"
+            id="name"
+          >
+            <label for="name">Name *</label>
+            <input type="text" id="name" required />
+
+            <label for="email">Email *</label>
+            <input type="text" id="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
     </main>
   </body>
 </html>
