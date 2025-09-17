@@ -1,26 +1,29 @@
-document.querySelector('form').addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevent default form submission
-
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch('https://formspree.io/f/myzdavje', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data) // Convert JavaScript object to JSON string
-            });
-
-            if (response.ok) {
-                // Handle success (e.g., redirect to a thank you page)
-                console.log('Form submitted successfully!');
-            } else {
-                // Handle error
-                console.error('Form submission failed:', response.statusText);
-            }
-        } catch (error) {
-            console.error('Network error:', error);
-        }
-    });
+var form = document.getElementById("my-form");
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("my-form-status");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+  method: form.method,
+  body: data,
+  headers: {
+    'Accept': 'application/json'
+}
+}).then(response => {
+  if (response.ok) {
+    status.innerHTML = "Thanks for your submission!";
+    form.reset()
+  } else {
+    response.json().then(data => {
+    if (Object.hasOwn(data, 'errors')) {
+      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+    } else {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    }
+  })
+}
+}).catch(error => {
+  status.innerHTML = "Oops! There was a problem submitting your form"
+});
+}
+form.addEventListener("submit", handleSubmit)
