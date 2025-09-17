@@ -180,23 +180,20 @@
             contact form!
           </div>
 
-          <form
-            action="https://formspree.io/f/myzdavje"
-            method="POST"
-            type="text"
-            id="name"
-          >
+          <form action="https://formspree.io/f/myzdavje" method="POST">
             <label for="name">Name *</label>
             <input type="text" id="name" required />
 
             <label for="email">Email *</label>
-            <input type="text" id="email" required />
+            <input type="email" id="email" required />
 
             <label for="message">Message</label>
             <textarea id="message"></textarea>
 
             <button type="submit">Send Message</button>
           </form>
+
+          <script src="forms.js"></script>
         </div>
       </section>
     </main>
